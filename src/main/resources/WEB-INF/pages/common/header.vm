@@ -1,0 +1,16 @@
+<div class="header w-size">
+    <h1 class="logo"> <img
+            src="${request.contextPath}/images/logo.png" width="500" height="150" alt="醉●coding">
+    </h1>
+    <div class="nav clearfix">
+        <div class="menu-sidebar_menu-container">
+            <ul id="menu-sidebar_menu" class="menu">
+                <li id="menu-item-181"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-181"><a
+                        title="首页" href="#" class="">首页</a></li>
+                <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a
+                        title="关于我" href="#" class="">关于我</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

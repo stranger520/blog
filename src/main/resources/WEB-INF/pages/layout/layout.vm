@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>醉●coding</title>
+    #parse("WEB-INF/pages/common/style.vm")
+    <style>
+        body.custom-background { background-color: #0b3b41; background-image: url("${request.contextPath}/images/blog-bg.jpg"); background-position: center top; background-size: auto; background-repeat: no-repeat; background-attachment: fixed; }
+
+        .w-size { width:90%; }
+    </style>
+    #parse("WEB-INF/pages/common/js.vm")
+</head>
+<body class="home blog custom-background" cz-shortcut-listen="true">
+    #parse("WEB-INF/pages/common/header.vm")
+    <div class="wrap w-size" id="wrap">
+        $screen_content
+    </div>
+    #parse("WEB-INF/pages/common/footer.vm")
+    <div id="gtotop" class="m-goTopArea" style="display: block;"><a href="javascript:;" class="goTop" title="回到顶部">回到顶部</a></div>
+    <div class="bg-fixed"></div>
+    <script>
+        $(function () {
+            jQuery(window).scroll(function () {
+                if ($(window).scrollTop() >= $(window).height()) {
+                    jQuery("#gtotop").fadeIn(600)
+                } else {
+                    jQuery("#gtotop").fadeOut(600)
+                }
+            });
+            jQuery("#gtotop").click(function () {
+                jQuery('body,html').animate({
+                    scrollTop : 0
+                }, 600);
+                return false
+            });
+        });
+    </script>
+</body>
+</html>
